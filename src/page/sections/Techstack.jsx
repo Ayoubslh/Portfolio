@@ -1,5 +1,7 @@
-import { TechArrLanguages,TechArrBack,TechArrFront,TechArrMobile,TechArrTools } from "./../../constants/technologies"; // or inline if in same file
-import TechCard from "./../comps/TechCard";
+
+import TechCard from "@/page/comps/techCard"
+import { TechArrLanguages,TechArrBack,TechArrFront,TechArrMobile,TechArrTools } from "./../../constants/technologies"; 
+
 
 export default function Techstack() {
   return (
