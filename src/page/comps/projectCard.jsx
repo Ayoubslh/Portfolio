@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { FaGithub } from "react-icons/fa";
 export default function PCard({ project }) {
   return (
     <div className="h-[500px] dark:bg-zinc-900 rounded-lg shadow-lg flex flex-col text-center overflow-hidden">
@@ -27,10 +28,19 @@ export default function PCard({ project }) {
           </div>
         )}
 
-        <div className="flex justify-center gap-2 mt-auto">
-          <Button variant="default">Demo</Button>
-          <Button variant="outline">Source Code</Button>
-        </div>
+       <div className="flex gap-4 mt-4 align-center justify-center">
+  <Button
+    className="bg-blue-600 text-white hover:shadow-[0_0_12px_#3b82f6] hover:bg-blue-400 transition duration-300"
+  >
+    Demo
+  </Button>
+
+  <Button
+    className="bg-fuchsia-800 text-white flex items-center gap-2 hover:shadow-[0_0_12px_#d946ef] hover:bg-fuchsia-500 transition duration-300"
+  >
+    Source Code <FaGithub />
+  </Button>
+</div>
       </div>
     </div>
   );

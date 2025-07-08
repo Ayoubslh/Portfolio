@@ -2,6 +2,7 @@ import PCard from "../comps/projectCard";
 import iotlab from "./../../assets/projectsimages/IOTLab.png";
 import inboxAI from "./../../assets/projectsimages/InboxAI.png"
 import GuessGame from "./../../assets/projectsimages/GuessGame.png"
+import Autoplay from "embla-carousel-autoplay"
 
 import {
   Carousel,
@@ -44,11 +45,19 @@ const ProjectsArr = [
 
 export default function Projects() {
   return (
-    <div className="mt-10 border-t-2 border-gray-700">
+    <div className="  border-t-4 border-gray-600 mt-15">
      <h1 className="text-center font-semibold text-3xl">Projects</h1>
     <section className="flex flex-col border-2 border-gray-50  rounded-lg  mt-6 w-full">
        
-      <Carousel >
+      <Carousel   opts={{
+    align: "start",
+    loop: true,
+  }}
+  plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+   ]} >
         <CarouselContent className="">
           {ProjectsArr.map((project) => (
             <CarouselItem

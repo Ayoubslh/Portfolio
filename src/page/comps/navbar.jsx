@@ -2,7 +2,7 @@
 
 export default function Navbar(){
     return (
-        <header className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm border-b border-white/10">
+        <header className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm ">
 
             <div className="mx-auto max-w-3xl px-8 py-6">
         <nav className=" flex items-center  ">
