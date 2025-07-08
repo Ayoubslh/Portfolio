@@ -12,7 +12,7 @@ function App() {
    
     <div className=" min-h-screen  bg-gray-950">   
        <Navbar></Navbar>
-       <div className="mx-auto flex max-w-3xl flex-col px-8">
+       <div className="mx-auto flex max-w-4xl flex-col px-8">
        <main className="grow">
        <About></About>
        <Techstack/>

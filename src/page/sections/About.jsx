@@ -1,28 +1,53 @@
-import MeImage from './../../assets/Me.jpg'
-import { FaFileDownload } from "react-icons/fa";
-import { Button } from '@/components/ui/button';
-import SocialIcons from './../comps/socials';
+import MeImage from "./../../assets/Me.jpg";
+import { FaFileDownload, FaCheck } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
+import SocialIcons from "./../comps/socials";
+import { GiCheckMark } from "react-icons/gi";
 
 export default function About() {
   return (
-    <section id="about" className="grid-cols-1 sm:mt-8 grid sm:grid-cols-2 gap-8 pb-1">
+    <section
+      id="about"
+      className="grid-cols-1 sm:mt-8 grid sm:grid-cols-2 gap-8 pb-1"
+    >
       <div>
-  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white relative group">
-  Ayoub here ,Your Friendly{" "}
-  <span className="text-amber-400 animate-pulse group-hover:text-amber-500 transition duration-300">
-    FullStack
-  </span>{" "}
-  Developer
-  <span className="block h-1 w-16 bg-amber-500 mt-2 rounded group-hover:w-24 transition-all duration-300"></span>
+        <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold tracking-tight text-white relative group">
+          Ayoub here, Creative{" "}
+          <span className="text-amber-400 animate-pulse group-hover:text-amber-500 transition duration-300">
+            FullStack
+          </span>{" "}
+          Developer
+          <span className="block h-1 w-16 bg-amber-500 mt-2 rounded group-hover:w-24 transition-all duration-300"></span>
+        </h1>
 
-</h1>
+        <div className="mt-3 flex items-center">
+          <GiCheckMark className="mr-5 text-xl" /> 
+          <p >
+         
+            Crafting <b>full-stack
+            applications</b> with clean, scalable code.
+          </p>
+        </div>
 
+        <div className="mt-3 flex items-center  ">
+         
+           <GiCheckMark className="mr-5 text-xl" />
+          <p >
+            Designing and <b>modeling 3D assets </b> for stylized, immersive games.
+          </p>
+        </div>
 
-        <p> Creative Full-Stack Developer and 3D game Artist </p>
-        <p className="mt-6">I don't just code — I create. Whether it's crafting full-stack apps, modeling weapons for a stylized game, or syncing real-time multiplayer logic, I love blending logic with visual storytelling. My goal? Build digital experiences that are fast, fun, and unforgettable.</p>
+        <div className="mt-3 flex  items-center">
+      
+          <GiCheckMark className="mr-5 text-xl" /> 
+          <p >
+           Blending <b> tech and storytelling </b>for fast,
+            fun,impactful experiences.
+          </p>
+
+        </div>
 
         <section className="mt-4 flex flex-row gap-4">
-         
           <a
             href="/Ayoub_Salhi_CV.pdf"
             download
@@ -32,12 +57,10 @@ export default function About() {
             Download CV
           </a>
 
-         
           <SocialIcons />
         </section>
       </div>
 
-      
       <div className="flex justify-center">
         <img
           src={MeImage}
