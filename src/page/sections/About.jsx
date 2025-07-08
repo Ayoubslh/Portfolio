@@ -7,9 +7,17 @@ export default function About() {
   return (
     <section id="about" className="grid-cols-1 sm:mt-8 grid sm:grid-cols-2 gap-8 pb-1">
       <div>
-        <h1 className="text-4xl">
-          Your Friendly <span className="text-amber-700">FullStack</span> Developer
-        </h1>
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white relative group">
+  Your Friendly{" "}
+  <span className="text-amber-400 animate-pulse group-hover:text-amber-500 transition duration-300">
+    FullStack
+  </span>{" "}
+  Developer
+  <span className="block h-1 w-16 bg-amber-500 mt-2 rounded group-hover:w-24 transition-all duration-300"></span>
+
+</h1>
+
+
         <p> Creative Full-Stack Developer and 3D game Artist </p>
         <p className="mt-6">I don't just code — I create. Whether it's crafting full-stack apps, modeling weapons for a stylized game, or syncing real-time multiplayer logic, I love blending logic with visual storytelling. My goal? Build digital experiences that are fast, fun, and unforgettable.</p>
 
@@ -34,7 +42,7 @@ export default function About() {
         <img
           src={MeImage}
           alt="My profile"
-          className="w-48 h-64 object-cover rounded-lg shadow-md"
+          className="w-48 h-90 object-cover rounded-lg shadow-md"
         />
       </div>
     </section>
