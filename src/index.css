@@ -122,3 +122,6 @@
 body{
   @apply text-white;
 }
+html {
+  scroll-behavior: smooth;
+}

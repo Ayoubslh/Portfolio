@@ -24,10 +24,10 @@ export default function Contact() {
 
     emailjs
       .send(
-        "service_is55qkk", // replace this
-        "template_rejhl38", // replace this
+        "service_is55qkk", 
+        "template_rejhl38", 
         form,
-        "ZkRjFDP1-XY4YaaDe" // replace this
+        "ZkRjFDP1-XY4YaaDe"
       )
       .then(
         (result) => {
@@ -92,35 +92,7 @@ export default function Contact() {
       </form>
     </section>
   
-   <section id="contact" className="py-16 px-6 max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-      <p className="text-gray-600 dark:text-gray-300 mb-10">
-        Feel free to reach out through any platform below!
-      </p>
-
-      <div className="flex justify-center gap-10 text-3xl">
-        <a
-          href="mailto:youremail@example.com"
-          className="hover:text-red-500 transition-transform hover:scale-110"
-        >
-          <MdOutlineEmail />
-        </a>
-        <a
-          href="https://github.com/Ayoubslh"
-          target="_blank"
-          className="hover:text-fuchsia-500 transition-transform hover:scale-110"
-        >
-          <FiGithub />
-        </a>
-        <a
-          href="https://linkedin.com/in/yourprofile"
-          target="_blank"
-          className="hover:text-blue-500 transition-transform hover:scale-110"
-        >
-          <FiLinkedin />
-        </a>
-      </div>
-    </section>
+  
     </div>
   )
 }

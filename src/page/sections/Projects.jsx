@@ -17,35 +17,32 @@ const ProjectsArr = [
     PId: 111,
     image: iotlab,
     title: "IOT Lab",
-    description: "A learning platform for IoT enthusiasts and beginners.",
+    description: "IOTLAB - A web Platform for: IOT Students , IOT Enthusiats and Self-LearnersIf you want to start in iot or hone your skills , but you don't have access to hardware part this is for you.",
     stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MySQL","Peer.js","Socket.io","Arduino-Cli"],
+    demo:false
   },
   {
     PId: 222,
     image: inboxAI,
     title: "InboxAI",
-    description: "Coming soon...",
+    description: "A smart email assistant powered by AI, designed to help you manage emails more efficiently using the LangChain framework for AI Agent development. We implemented two main agents: Email Processing Agent: Categorizes, prioritizes, and summarizes your emails to ensure you focus on what matters most. Reply Suggestion Agent: Generates intelligent email responses, saving you time and effort.",
     stack: ["React","Node.js","Express.js","MongoDB","Langchain.js"],
+    demo:false
   },
   {
     PId: 333,
     image: GuessGame,
     title: "Guess Me Game",
-    description: "Coming soon...",
+    description: "A simplr fun Gmae built with react and Express , Two players try to guess eachother's picture by asking quetions, players must be present",
     stack: ["React","Node.js","Express.js","WebSockets"],
+    demo:false
   },
-  {
-    PId: 123,
-    image: "",
-    title: "Project Four",
-    description: "Coming soon...",
-    stack: [],
-  },
+ 
 ];
 
 export default function Projects() {
   return (
-    <div className="  border-t-4 border-gray-600 mt-15">
+    <div id="projects" className="  border-t-4 border-gray-600 mt-15">
      <h1 className="text-center font-semibold text-3xl">Projects</h1>
     <section className="flex flex-col border-2 border-gray-50  rounded-lg  mt-6 w-full">
        
@@ -55,7 +52,7 @@ export default function Projects() {
   }}
   plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 6000,
         }),
    ]} >
         <CarouselContent className="">

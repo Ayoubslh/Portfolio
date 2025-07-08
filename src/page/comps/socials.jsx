@@ -1,6 +1,6 @@
 
-
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import {FaItchIo} from"react-icons/fa"
+import { FiGithub, FiLinkedin, } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function SocialIcons() {
@@ -31,6 +31,14 @@ export default function SocialIcons() {
         className="transition-transform duration-300 hover:scale-125 hover:text-red-700 hover:-rotate-6 hover:drop-shadow-[0_2px_8px_rgba(185,28,28,0.5)]"
       >
         <MdOutlineEmail className="text-2xl" />
+      </a>
+      <a
+        href="https://polymech.itch.io"
+          target="_blank"
+        rel="noopener noreferrer"
+        className="transition-transform duration-300 hover:scale-125 hover:text-red-500 hover:rotate-6 hover:drop-shadow-[0_2px_8px_rgba(37,99,235,0.5)]"
+      >
+        <FaItchIo className="text-2xl" />
       </a>
     </div>
   );

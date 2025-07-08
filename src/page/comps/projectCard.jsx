@@ -29,11 +29,11 @@ export default function PCard({ project }) {
         )}
 
        <div className="flex gap-4 mt-4 align-center justify-center">
-  <Button
+ { project.demo &&<Button
     className="bg-blue-600 text-white hover:shadow-[0_0_12px_#3b82f6] hover:bg-blue-400 transition duration-300"
   >
     Demo
-  </Button>
+  </Button>}
 
   <Button
     className="bg-fuchsia-800 text-white flex items-center gap-2 hover:shadow-[0_0_12px_#d946ef] hover:bg-fuchsia-500 transition duration-300"

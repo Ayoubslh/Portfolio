@@ -2,7 +2,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { MdOutlineEmail, MdKeyboardArrowUp } from "react-icons/md";
 
 export default function Footer() {
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+ 
 
   return (
     <footer className="bg-gray-950 text-gray-300 px-4 py-8 mt-auto border-t border-gray-800 relative">
@@ -38,13 +38,7 @@ export default function Footer() {
       </div>
 
       {/* Back to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="absolute left-10 bottom-6 p-2 bg-fuchsia-700 text-white rounded-full shadow-md hover:shadow-[0_0_12px_#d946ef] transition hover:scale-110"
-        title="Back to Top"
-      >
-        <MdKeyboardArrowUp className="text-2xl " />
-      </button>
+    
     </footer>
   );
 }
