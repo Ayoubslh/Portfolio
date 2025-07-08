@@ -13,7 +13,7 @@ export default function PCard({ project }) {
       {/* Content: the remaining half */}
       <div className="flex flex-col justify-between flex-1 px-4 py-3 gap-2">
         <h2 className="text-lg font-semibold">{project.title}</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+        <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3 cursor-help ">{project.description}</p>
 
         {project.stack.length > 0 && (
           <div className="flex flex-wrap justify-center gap-2 mt-auto">

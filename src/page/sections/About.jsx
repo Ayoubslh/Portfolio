@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className="grid-cols-1 sm:mt-8 grid sm:grid-cols-2 gap-8 pb-1">
       <div>
   <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white relative group">
-  Your Friendly{" "}
+  Ayoub here ,Your Friendly{" "}
   <span className="text-amber-400 animate-pulse group-hover:text-amber-500 transition duration-300">
     FullStack
   </span>{" "}
