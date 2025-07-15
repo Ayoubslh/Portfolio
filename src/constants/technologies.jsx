@@ -3,7 +3,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { SiMongodb,SiVite ,SiExpress, SiFirebase} from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiTailwindcss, SiSocketdotio, SiBlender, SiUnity, SiGit, SiGithub,SiShadcnui,SiLangchain  } from "react-icons/si";
+import { SiTailwindcss, SiSocketdotio, SiBlender, SiUnity, SiGit, SiGithub,SiShadcnui,SiLangchain,SiExpo,SiTypescript  } from "react-icons/si";
 
 import { LiaProjectDiagramSolid } from "react-icons/lia"; // For PeerJS
 import { FaGithub } from "react-icons/fa";
@@ -18,6 +18,8 @@ export const TechArrLanguages = [
     name: "C",
     color: "#00599C",
   },
+  {icon: SiTypescript,name:"TypeScript",color:"#3178C6"
+  }
 ];
 
 export const TechArrFront = [
@@ -118,4 +120,10 @@ export const TechArrTools = [
     name: "GitHub",
     color: "#181717",
   },
+   {
+    icon: SiExpo,
+    name:"Expo",
+    color:"#fff"
+   }
+
 ];

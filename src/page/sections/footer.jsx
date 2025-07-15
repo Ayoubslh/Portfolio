@@ -7,10 +7,10 @@ export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-300 px-4 py-8 mt-auto border-t border-gray-800 relative">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Left: Copyright */}
+        
         <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Ayoub Salhi. All rights reserved.</p>
 
-        {/* Right: Social Icons */}
+        
         <div className="flex gap-6 text-xl">
           <a
             href="mailto:youremail@example.com"
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Back to Top Button */}
+    
     
     </footer>
   );
