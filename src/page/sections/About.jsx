@@ -14,7 +14,7 @@ export default function About() {
         <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold tracking-tight text-white relative group">
           Ayoub here, Creative{" "}
           <span className="text-amber-400 animate-pulse group-hover:text-amber-500 transition duration-300">
-            FullStack
+            MERN & Native
           </span>{" "}
           Developer
           <span className="block h-1 w-16 bg-amber-500 mt-2 rounded group-hover:w-24 transition-all duration-300"></span>
