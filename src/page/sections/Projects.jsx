@@ -22,7 +22,8 @@ const ProjectsArr = [
     title: "IOT Lab",
     description: "IOTLAB - A web Platform for: IOT Students , IOT Enthusiats and Self-LearnersIf you want to start in iot or hone your skills , but you don't have access to hardware part this is for you.",
     stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MySQL","Peer.js","Socket.io","Arduino-Cli"],
-    demo:false
+    demo:false,
+    codeLink:"https://github.com/Ayoubslh/IOTLAB"
   },
   {
     PId: 222,
@@ -30,7 +31,8 @@ const ProjectsArr = [
     title: "InboxAI",
     description: "A smart email assistant powered by AI, designed to help you manage emails more efficiently using the LangChain framework for AI Agent development. We implemented two main agents: Email Processing Agent: Categorizes, prioritizes, and summarizes your emails to ensure you focus on what matters most. Reply Suggestion Agent: Generates intelligent email responses, saving you time and effort.",
     stack: ["React","Node.js","Express.js","MongoDB","Langchain.js"],
-    demo:false
+    demo:false,
+    codeLink:"https://github.com/Ayoubslh/InboxAI"
   },
   {
     PId: 333,
@@ -39,7 +41,8 @@ const ProjectsArr = [
     description: "A simple movie platform that allows users to view and read about Movies.",
     stack: ["HTML","CSS","Javascript","TMDB API"],
     demo:true,
-    demoLink:"https://ayoubslh.github.io/MovieApp"
+    demoLink:"https://ayoubslh.github.io/MovieApp",
+    codeLink:"https://github.com/Ayoubslh/MovieApp"
   },
 
   {
@@ -49,7 +52,8 @@ const ProjectsArr = [
     description: "An e-commerce website and mobile app that allows users to buy and sell tech products. Users can create an account, browse products, add items to their cart, and checkout securely.",
     stack: ["React","React Native","Node.js","Express.js","MongoDB"],
     demo:true,
-    demoLink:"https://hptecs.vercel.app/"
+    demoLink:"https://hptecs.vercel.app/",
+    codeLink:"https://github.com/Ayoubslh/"
   }
   ,
   {
@@ -59,7 +63,9 @@ const ProjectsArr = [
     description: "A humanitarian mobile apps that allows users in crisis area to request or offer help , offlline first app with online sync when connection is available. Also the possibility of viewing location and offering donations to people in need.",
     stack: ["React Native","Expo","WatermelonDB"],
     demo:true,
-    demoLink:"https://drive.google.com/file/d/1T3W6jQNqGaR0KSkDeT6aAflZq0_77DEl/view?usp=drivesdk"
+    demoLink:"https://drive.google.com/file/d/1T3W6jQNqGaR0KSkDeT6aAflZq0_77DEl/view?usp=drivesdk",
+    codeLink:"https://github.com/Ayoubslh/Sanned"
+
   }
  
 ];

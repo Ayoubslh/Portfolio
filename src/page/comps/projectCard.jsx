@@ -58,26 +58,29 @@ export default function PCard({ project }) {
         {/* Action Buttons */}
         <div className="flex gap-3 pt-2">
           {project.demo && (
-            <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+          
             <Button 
               size="sm"
               className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-md hover:shadow-lg transition-all duration-300"
-              
+              onClick={() => window.open(project.demoLink, '_blank', 'noopener,noreferrer')}
             >
               <FaExternalLinkAlt className="w-3 h-3 mr-2" />
               Live Demo
             </Button>
-            </a>
+            
           )}
-          
+         
           <Button 
             size="sm"
             variant="outline"
             className="flex-1 border-gray-300 dark:border-zinc-600 hover:bg-gray-50 dark:hover:bg-zinc-800 transition-all duration-300"
+            onClick={() => window.open(project.codeLink, '_blank', 'noopener,noreferrer')}
           >
+             
             <FaGithub className="w-3 h-3 mr-2" />
             Code
           </Button>
+          
         </div>
       </div>
     </div>
