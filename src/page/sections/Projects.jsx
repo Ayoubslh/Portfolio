@@ -1,7 +1,10 @@
 import PCard from "../comps/projectCard";
-import iotlab from "./../../assets/projectsimages/IOTLab.png";
-import inboxAI from "./../../assets/projectsimages/InboxAI.png"
-import GuessGame from "./../../assets/projectsimages/GuessGame.png"
+import inboxAI from "./../../assets/projectsimages/inboxbig.png";
+import iotlab from "./../../assets/projectsimages/iot.png";
+import sanned from "./../../assets/projectsimages/sanned.png";
+import streamous from "./../../assets/projectsimages/streaminplat.png";
+import techstore from "./../../assets/projectsimages/techstore.png";
+
 import Autoplay from "embla-carousel-autoplay"
 
 import {
@@ -31,12 +34,33 @@ const ProjectsArr = [
   },
   {
     PId: 333,
-    image: GuessGame,
-    title: "Guess Me Game",
-    description: "A simplr fun Gmae built with react and Express , Two players try to guess eachother's picture by asking quetions, players must be present",
-    stack: ["React","Node.js","Express.js","WebSockets"],
-    demo:false
+    image: streamous,
+    title: "Streamous",
+    description: "A simple movie platform that allows users to view and read about Movies.",
+    stack: ["HTML","CSS","Javascript","TMDB API"],
+    demo:true,
+    demoLink:"https://ayoubslh.github.io/MovieApp"
   },
+
+  {
+    PId: 444,
+    image: techstore,
+    title: "TechStore",
+    description: "An e-commerce website and mobile app that allows users to buy and sell tech products. Users can create an account, browse products, add items to their cart, and checkout securely.",
+    stack: ["React","React Native","Node.js","Express.js","MongoDB"],
+    demo:true,
+    demoLink:"https://hptecs.vercel.app/"
+  }
+  ,
+  {
+    PId: 555,
+    image: sanned,
+    title: "Sanned",
+    description: "A humanitarian mobile apps that allows users in crisis area to request or offer help , offlline first app with online sync when connection is available. Also the possibility of viewing location and offering donations to people in need.",
+    stack: ["React Native","Expo","WatermelonDB"],
+    demo:true,
+    demoLink:"https://drive.google.com/file/d/1T3W6jQNqGaR0KSkDeT6aAflZq0_77DEl/view?usp=drivesdk"
+  }
  
 ];
 
@@ -44,7 +68,7 @@ export default function Projects() {
   return (
     <div id="projects" className="  border-t-4 border-gray-600 mt-15">
      <h1 className="text-center font-semibold text-3xl">Projects</h1>
-    <section className="flex flex-col border-2 border-gray-50  rounded-lg  mt-6 w-full">
+    <section className="flex flex-col  rounded-lg  mt-6 w-full">
        
       <Carousel   opts={{
     align: "start",

@@ -49,7 +49,7 @@ export default function About() {
 
         <section className="mt-4 flex flex-row gap-4">
           <a
-            href="/CV.pdf"
+            href="/Salhi_Ayoub_Abdelmoumenme_CV.pdf"
             download
             className="rounded-md px-4 py-2 flex items-center gap-2 text-white bg-gradient-to-b from-gray-600 to-gray-700 border border-white/10 shadow-inner shadow-gray-800/40 hover:from-gray-500 hover:to-gray-600 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
           >
