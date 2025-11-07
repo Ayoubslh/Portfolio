@@ -5,7 +5,7 @@ import sanned from "./../../assets/projectsimages/sanned.png";
 import streamous from "./../../assets/projectsimages/streaminplat.png";
 import techstore from "./../../assets/projectsimages/techstore.png";
 import nextech from "./../../assets/projectsimages/nextech.png";
-import loney from "./../../assets/projectsimages/loney.png";
+import loney from "./../../assets/projectsimages/LONEY.png";
 
 const ProjectsArr = [
   {
