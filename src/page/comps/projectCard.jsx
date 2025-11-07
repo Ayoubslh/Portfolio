@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt} from "react-icons/fa";
 
 export default function PCard({ project }) {
   return (
-    <article className="group flex flex-col  md:flex-row items-stretch bg-white dark:bg-zinc-900 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-zinc-700">
+    <article className="group flex flex-col  md:flex-row items-stretch bg-white dark:bg-zinc-900 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-zinc-800">
       {/* Image - fixed to the real image size (400x300) on the left */}
       <div className="flex-shrink-0 h-full  bg-gradient-to-br from-white to-white dark:from-zinc-800 dark:to-zinc-900 relative overflow-hidden">
         <img
