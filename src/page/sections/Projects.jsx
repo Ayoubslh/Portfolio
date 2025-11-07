@@ -43,7 +43,7 @@ const ProjectsArr = [
     image: techstore,
     title: "TechStore",
     description:
-      "An e-commerce website and mobile app that allows users to buy and sell tech products. Users can create an account, browse products, add items to their cart, and checkout securely.",
+      "An e-commerce website and mobile app that allows users to buy and sell tech products. Users can create an account, browse products, add items to their cart, and checkout securely. (mobile app repo:storemobile , backend repo: E-Shop )",
     stack: ["React", "React Native", "Node.js", "Express.js", "MongoDB"],
     demo: true,
     demoLink: "https://hptecs.vercel.app/",
