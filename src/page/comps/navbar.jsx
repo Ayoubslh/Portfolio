@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [active, setActive] = useState("about");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["about", "projects", "contact"];
       const scrollY = window.scrollY + 100;
+
+      setScrolled(window.scrollY > 50);
 
       for (const id of sections) {
         const section = document.getElementById(id);
@@ -21,34 +24,40 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
+    { id: "about", label: "Home" },
+    { id: "projects", label: "Work" },
     { id: "contact", label: "Contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm">
-      <div className="mx-auto max-w-3xl px-6 py-4">
-        <nav className="flex items-center justify-between">
-          <ul className="flex gap-6">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? "bg-gray-950/90 backdrop-blur-lg border-b border-white/10 shadow-lg" 
+          : "bg-transparent"
+      }`}
+    >
+      <div className="section-container">
+        <nav className="flex items-center justify-between py-4">
+          {/* Logo */}
+          <a href="#about" className="text-2xl font-black">
+            <span className="text-white">AS</span>
+            <span className="text-amber-400">.</span>
+          </a>
+
+          {/* Nav Links */}
+          <ul className="flex items-center gap-8">
             {navItems.map(({ id, label }) => (
               <li key={id}>
                 <a
                   href={`#${id}`}
-                  className={`relative font-bold text-sm tracking-wide uppercase transition 
-                  ${
+                  className={`font-medium text-sm transition-colors ${
                     active === id
                       ? "text-amber-400"
-                      : "text-white/70 hover:text-white"
+                      : "text-gray-400 hover:text-white"
                   }`}
                 >
                   {label}
-               
-                  <span
-                    className={`absolute left-0 -bottom-1 h-[2px] w-full bg-amber-400 transition-transform duration-300 ease-in-out scale-x-0 ${
-                      active === id ? "scale-x-100" : "hover:scale-x-100"
-                    }`}
-                  />
                 </a>
               </li>
             ))}

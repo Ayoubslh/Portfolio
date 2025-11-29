@@ -2,43 +2,45 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { MdOutlineEmail, MdKeyboardArrowUp } from "react-icons/md";
 
 export default function Footer() {
- 
-
   return (
-    <footer className="bg-gray-950 text-gray-300 px-4 py-8 mt-auto border-t border-gray-800 relative">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Ayoub Salhi. All rights reserved.</p>
+    <footer className="bg-black border-t border-white/10 py-8">
+      <div className="section-container">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Copyright */}
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()} Ayoub Salhi. All rights reserved.
+          </p>
 
-        
-        <div className="flex gap-6 text-xl">
-          <a
-            href="mailto:youremail@example.com"
-            className="hover:text-red-500 hover:scale-110 transition"
-          >
-            <MdOutlineEmail />
-          </a>
-          <a
-            href="https://github.com/Ayoubslh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-fuchsia-500 hover:scale-110 transition"
-          >
-            <FiGithub />
-          </a>
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-500 hover:scale-110 transition"
-          >
-            <FiLinkedin />
-          </a>
+          {/* Social Links */}
+          <div className="flex items-center gap-4">
+            <a
+              href="mailto:salhiayoubabdelmoumen@gmail.com"
+              className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:bg-white/10 transition-all"
+              aria-label="Email"
+            >
+              <MdOutlineEmail className="text-xl" />
+            </a>
+            <a
+              href="https://github.com/Ayoubslh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:bg-white/10 transition-all"
+              aria-label="GitHub"
+            >
+              <FiGithub className="text-xl" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ayoub-abdelmoumen-salhi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:bg-white/10 transition-all"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin className="text-xl" />
+            </a>
+          </div>
         </div>
       </div>
-
-    
-    
     </footer>
   );
 }

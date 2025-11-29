@@ -2,13 +2,22 @@ export default function TechCard({ icon: Icon, name, color }) {
   const isImage = typeof Icon === "string";
 
   return (
-    <div className="bg-gray-900 rounded-xl p-6 shadow-md flex flex-col items-center justify-center gap-3 transition duration-300 border border-gray-800 hover:border-amber-300 hover:shadow-[0_0_20px_#f0abfc] hover:scale-105">
+    <div className="glass-card px-6 py-4 flex items-center gap-3 min-w-[180px] group hover-glow">
       {isImage ? (
-        <img src={Icon} alt={name} className="w-12 h-12 object-contain" />
+        <img 
+          src={Icon} 
+          alt={name} 
+          className="w-10 h-10 object-contain flex-shrink-0" 
+        />
       ) : (
-        <Icon className="text-4xl" style={{ color }} />
+        <Icon 
+          className="text-4xl flex-shrink-0" 
+          style={{ color }} 
+        />
       )}
-      <span className="text-sm font-medium text-white">{name}</span>
+      <span className="text-sm font-semibold text-white whitespace-nowrap">
+        {name}
+      </span>
     </div>
   );
 }
