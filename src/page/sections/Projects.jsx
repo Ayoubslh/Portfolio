@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaChevronDown } from "react-icons/fa";
 import inboxAI from "./../../assets/projectsimages/inboxbig.png";
 import iotlab from "./../../assets/projectsimages/iot.png";
 import sanned from "./../../assets/projectsimages/sanned.png";
@@ -105,6 +105,7 @@ const categories = [
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All Projects");
   const [selectedProject, setSelectedProject] = useState(ProjectsArr[0]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const filteredProjects = activeCategory === "All Projects" 
     ? ProjectsArr 
@@ -119,6 +120,11 @@ export default function Projects() {
     if (filtered.length > 0) {
       setSelectedProject(filtered[0]);
     }
+  };
+
+  const handleProjectSelect = (project) => {
+    setSelectedProject(project);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -158,10 +164,87 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Split View Layout */}
+        {/* Mobile: Floating Project Selector */}
+        <div className="lg:hidden mb-4">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="w-full glass-card p-4 flex items-center justify-between gap-3"
+          >
+            <div className="flex items-center gap-3 flex-1 min-w-0">
+              <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 min-w-0 text-left">
+                <h3 className="font-bold text-white text-sm truncate">
+                  {selectedProject.title}
+                </h3>
+                <p className="text-xs text-gray-500 uppercase">
+                  {selectedProject.category}
+                </p>
+              </div>
+            </div>
+            <FaChevronDown className={`text-amber-400 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
+          </button>
+
+          {/* Floating Menu */}
+          {isMenuOpen && (
+            <>
+              {/* Backdrop */}
+              <div 
+                className="fixed inset-0 bg-black/60 z-40"
+                onClick={() => setIsMenuOpen(false)}
+              ></div>
+              
+              {/* Menu Drawer */}
+              <div className="fixed inset-x-4 top-1/2 -translate-y-1/2 z-50 max-h-[70vh] overflow-y-auto glass-card p-4 space-y-2 animate-fade-in">
+                {filteredProjects.map((project) => (
+                  <button
+                    key={project.PId}
+                    onClick={() => handleProjectSelect(project)}
+                    className={`w-full text-left transition-all ${
+                      selectedProject.PId === project.PId ? "scale-[1.02]" : ""
+                    }`}
+                  >
+                    <div className={`p-3 rounded-lg flex gap-3 items-center transition-all ${
+                      selectedProject.PId === project.PId
+                        ? "bg-amber-400/20 border-2 border-amber-400"
+                        : "bg-white/5 border border-white/10 hover:border-white/20"
+                    }`}>
+                      <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden">
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className={`font-bold text-sm mb-1 truncate ${
+                          selectedProject.PId === project.PId
+                            ? "text-amber-400"
+                            : "text-white"
+                        }`}>
+                          {project.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 uppercase tracking-wide">
+                          {project.category}
+                        </p>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Desktop & Mobile Layout */}
         <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
-          {/* Left: Project List */}
-          <div className="lg:col-span-4 space-y-3 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+          {/* Desktop: Left Project List */}
+          <div className="hidden lg:block lg:col-span-4 space-y-3 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
             {filteredProjects.map((project) => (
               <button
                 key={project.PId}
@@ -207,9 +290,9 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Right: Project Details */}
+          {/* Project Details */}
           <div className="lg:col-span-8">
-            <div className="glass-card p-6 space-y-6">
+            <div className="glass-card p-4 sm:p-6 space-y-4 sm:space-y-6">
               {/* Project Image */}
               <div className="relative rounded-xl overflow-hidden aspect-video bg-gray-900">
                 <img 
@@ -222,9 +305,9 @@ export default function Projects() {
 
               {/* Project Info */}
               <div className="space-y-4">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div>
-                    <h3 className="text-3xl font-black text-white mb-2">
+                    <h3 className="text-2xl sm:text-3xl font-black text-white mb-2">
                       {selectedProject.title}
                     </h3>
                     <span className="inline-block px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-semibold uppercase">
@@ -233,13 +316,13 @@ export default function Projects() {
                   </div>
                   
                   {/* Action Buttons */}
-                  <div className="flex gap-2 flex-shrink-0">
+                  <div className="flex gap-2 sm:flex-shrink-0">
                     {selectedProject.demo && selectedProject.demoLink && (
                       <a
                         href={selectedProject.demoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-amber-500 text-black font-bold hover:from-amber-500 hover:to-amber-600 transition-all flex items-center gap-2 text-sm"
+                        className="flex-1 sm:flex-none px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-amber-500 text-black font-bold hover:from-amber-500 hover:to-amber-600 transition-all flex items-center justify-center gap-2 text-sm"
                       >
                         <FaExternalLinkAlt />
                         Demo
@@ -249,7 +332,7 @@ export default function Projects() {
                       href={selectedProject.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-amber-400/50 transition-all flex items-center gap-2 text-sm"
+                      className="flex-1 sm:flex-none px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-amber-400/50 transition-all flex items-center justify-center gap-2 text-sm"
                     >
                       <FaGithub />
                       Code
